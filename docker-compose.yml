@@ -1,0 +1,24 @@
+version: '2'
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:10.6
+    container_name: luminews-mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=root1234
+      - MARIADB_USER=luminews
+      - MARIADB_PASSWORD=luminews1234
+      - MARIADB_DATABASE=luminews_db
+    ports:
+      - "5500:3306"
+    networks:
+      - docker-service
+    volumes:
+      - ./db:/data/db
+networks:
+  docker-service:
+    driver: bridge
+
+volumes:
+  maria-data:
+    driver: local
+    

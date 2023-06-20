@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "2a41d586-a0c9-4265-904f-0c7a278bb4b3",
+		"name": "luminews-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rss urls",
+			"item": [
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"malaymail\",\n    \"url\": \"https://www.malaymail.com/feed/rss/malaysia\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/urls/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"malaymail\",\n    \"url\": \"https://www.malaymail.com/feed/rss/malaysia\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/urls/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"malaymail\",\n    \"url\": \"https://www.malaymail.com/feed/rss/malaysia\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/urls/36831bf9-0f15-11ee-adfb-0242ac1d0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"36831bf9-0f15-11ee-adfb-0242ac1d0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asdf2\",\n    \"url\": \"https://www.test2.com\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/urls/36831bf9-0f15-11ee-adfb-0242ac1d0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"36831bf9-0f15-11ee-adfb-0242ac1d0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asdf\",\n    \"url\": \"https://www.test.com\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/urls/c47b2f68-0e8a-11ee-8f70-0242ac1b0002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"c47b2f68-0e8a-11ee-8f70-0242ac1b0002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rss feeds",
+			"item": [
+				{
+					"name": "rss feeds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"malaymail\",\n    \"url\": \"https://www.malaymail.com/feed/rss/malaysia\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/rssFeeds",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"rssFeeds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
